@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class movePlayer : MonoBehaviour
 {
-    private float _speedX=0, _speedY=0, _speedZ=0;
     float rotationX=0;
-    float rotationY=0;
 
     public float _acc = 8f;
     private float _rotationSpeed = 2f;
