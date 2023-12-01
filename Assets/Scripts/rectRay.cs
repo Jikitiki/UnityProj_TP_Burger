@@ -27,7 +27,7 @@ public class rectRay : MonoBehaviour
         {
             Debug.Log("Touché! ("+hit.collider.gameObject.name+")");
             GameObject salade = Instantiate(saladePrefab, hit.collider.gameObject.GetComponent<Transform>());
-            Vector3 size = new (0, (float)0.1, 0);//(0, hit.collider.gameObject.GetComponent<Collider>().bounds.size.y, 0);
+            Vector3 size = new(0, hit.collider.gameObject.GetComponent<BoxCollider>().size.y, 0);//(0, (float)0.05, 0);
             salade.transform.position = salade.transform.position + size;
         }
     }
