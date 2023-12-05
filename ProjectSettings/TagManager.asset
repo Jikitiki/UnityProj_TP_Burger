@@ -6,6 +6,12 @@ TagManager:
   tags:
   - salade
   - rayLine
+  - Fromage
+  - Salade
+  - PainBas
+  - Tomates
+  - Steak
+  - PainHaut
   layers:
   - Default
   - TransparentFX
