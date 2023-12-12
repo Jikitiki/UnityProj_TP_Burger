@@ -1898,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plate01
       objectReference: {fileID: 0}
+    - target: {fileID: 1199257847282564, guid: 5c25fbb7b2a978d4a97d97cb90ac8887, type: 3}
+      propertyPath: m_TagString
+      value: Burger
+      objectReference: {fileID: 0}
     - target: {fileID: 4652348561443860, guid: 5c25fbb7b2a978d4a97d97cb90ac8887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

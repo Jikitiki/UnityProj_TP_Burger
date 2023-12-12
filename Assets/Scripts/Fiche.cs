@@ -10,6 +10,7 @@ public class Fiche : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Burger = GameObject.FindGameObjectWithTag("Burger");
         generationFiche();
     }
 
@@ -39,7 +40,7 @@ public class Fiche : MonoBehaviour
             CompositionAFaire[i + 1] = ((Aliment)alimentRandom).ToString();
         }
         CompositionAFaire[nbElement + 1] = "PainHaut";
-        Debug.Log("liste" + CompositionAFaire);
+        //Debug.Log("liste" + CompositionAFaire);
     }
 
     public void Verif()
@@ -69,4 +70,6 @@ public class Fiche : MonoBehaviour
         Debug.Log("ele " + nbEle);
         return nbEle;
     }
+
+
 }
