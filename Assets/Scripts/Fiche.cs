@@ -13,7 +13,6 @@ public class Fiche : MonoBehaviour
 
     public GameObject Burger; 
     public TextMeshPro _textMeshPro;
-    private Transform _transform;
 
 
 
@@ -23,7 +22,6 @@ public class Fiche : MonoBehaviour
         Burger = GameObject.FindGameObjectWithTag("Burger");
         generationFiche();
         _textMeshPro.color = Color.black;
-        _transform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -53,7 +51,7 @@ public class Fiche : MonoBehaviour
         }
         CompositionAFaire[nbElement + 1] = "PainHaut";
 
-        GetComponent<timer>()._time = temps = Random.Range(10, 20);
+        GetComponent<timer>()._time = temps = Random.Range(15, 25)+nbElement*3;
         afficheComp();
 
         Debug.Log("liste" + CompositionAFaire);
