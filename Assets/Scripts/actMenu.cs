@@ -6,7 +6,6 @@ using UnityEngine;
 public class actMenu : MonoBehaviour
 {
 
-    public TextMeshPro _textMeshPro;
 
 
     // Start is called before the first frame update
@@ -17,7 +16,6 @@ public class actMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_textMeshPro != null) { Debug.Log("oui"); }
-        _textMeshPro.text = "Commande : \n test";
+
     }
 }
