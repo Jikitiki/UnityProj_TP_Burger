@@ -20,6 +20,7 @@ public class Fiche : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Burger = GameObject.FindGameObjectWithTag("Burger");
         generationFiche();
         _textMeshPro.color = Color.black;
         _transform = GetComponent<Transform>();
@@ -51,6 +52,7 @@ public class Fiche : MonoBehaviour
             CompositionAFaire[i + 1] = ((Aliment)alimentRandom).ToString();
         }
         CompositionAFaire[nbElement + 1] = "PainHaut";
+
         GetComponent<timer>()._time = temps = Random.Range(10, 20);
         afficheComp();
 
@@ -95,7 +97,5 @@ public class Fiche : MonoBehaviour
         }
         _textMeshPro.text = tmp;
     }
-
-
 
 }
