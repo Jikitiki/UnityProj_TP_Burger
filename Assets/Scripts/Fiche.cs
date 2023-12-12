@@ -7,6 +7,9 @@ public class Fiche : MonoBehaviour
     public string[] CompositionAFaire;
     public GameObject Burger;
     public int score = 0;
+
+    public bool col = false, touche = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,37 @@ public class Fiche : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("e"))
+        {
+            touche = true;
+        }
+        if (Input.GetKeyUp("e"))
+        {
+            touche = false;
+        }
+        if (touche && col)
+        {
+            Verif();
+            touche = false;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Burger")
+        {
+            Debug.Log("CA RENTRE FORT LAAAAAAAAAAAAAAA");
+            col = true;
+
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Burger")
+        {
+            col = false;
+        }
     }
 
     public enum Aliment
@@ -45,9 +78,11 @@ public class Fiche : MonoBehaviour
 
     public void Verif()
     {
+        touche = false;
 
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         GameObject fils = Burger;
-        for (int i = 0; i < nbElement(); i++)
+        for (int i = 0; i < nbElement()-2; i++)
         {
             Debug.Log(fils.transform.GetChild(0).tag);
             if (CompositionAFaire[i] == fils.transform.GetChild(0).tag)
@@ -60,11 +95,14 @@ public class Fiche : MonoBehaviour
 
     public int nbElement()
     {
+        Debug.Log("ON PASSE ICIiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+
         GameObject fils = Burger;
         int nbEle = 0;
         while (fils.GetComponent<Transform>().childCount != 0)
         {
             nbEle++;
+            Debug.Log("ALLOOOOOOOOOOOOOO : " + fils.transform.GetChild(0).name);
             fils = GameObject.Find(fils.transform.GetChild(0).name);
         }
         Debug.Log("ele " + nbEle);
