@@ -15,7 +15,7 @@ public class mouseLock : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = (Cursor.lockState == CursorLockMode.None) ? CursorLockMode.Locked : CursorLockMode.None;
         }
     }
 }
