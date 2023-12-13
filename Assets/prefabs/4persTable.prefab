@@ -353,10 +353,8 @@ GameObject:
   - component: {fileID: 2448310097870196961}
   - component: {fileID: -2133841940988537010}
   - component: {fileID: -8756945248249431771}
-
   - component: {fileID: 5071480478859329231}
   - component: {fileID: 6848448699294810449}
-
   m_Layer: 0
   m_Name: 4persTable
   m_TagString: Untagged
@@ -372,19 +370,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6615323310190178969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-
   m_LocalPosition: {x: 0, y: 0, z: 0}
-
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 998793993979776630}
-  - {fileID: 26995505383424733}
+  - {fileID: 3087539715490844166}
+  - {fileID: 7129135878626450268}
   - {fileID: 727523095006122806}
+  - {fileID: 998793993979776630}
   - {fileID: 5155815524272419693}
   - {fileID: 5784833958248575089}
-  - {fileID: 7129135878626450268}
-  - {fileID: 3087539715490844166}
+  - {fileID: 26995505383424733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -421,7 +417,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6615323310190178969}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -441,7 +437,6 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &5071480478859329231
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,7 +449,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CompositionAFaire: []
-
   score: 0
   temps: 0
   Burger: {fileID: 0}
@@ -473,7 +467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textMeshPro: {fileID: 1451541387980381071}
   _time: 0
-
 --- !u!1001 &26995505383823453
 PrefabInstance:
   m_ObjectHideFlags: 0
