@@ -1,20 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class Fiche : MonoBehaviour
 {
     public string[] CompositionAFaire;
-    public GameObject Burger;
     public int score = 0;
 
-    public bool col = false, touche = false;
+    public int temps;
+
+
+    public GameObject Burger; 
+    public TextMeshPro _textMeshPro;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         Burger = GameObject.FindGameObjectWithTag("Burger");
         generationFiche();
+        _textMeshPro.color = Color.black;
     }
 
     // Update is called once per frame
@@ -73,7 +81,11 @@ public class Fiche : MonoBehaviour
             CompositionAFaire[i + 1] = ((Aliment)alimentRandom).ToString();
         }
         CompositionAFaire[nbElement + 1] = "PainHaut";
-        //Debug.Log("liste" + CompositionAFaire);
+
+        GetComponent<timer>()._time = temps = Random.Range(15, 25)+nbElement*3;
+        afficheComp();
+
+        Debug.Log("liste" + CompositionAFaire);
     }
 
     public void Verif()
@@ -109,5 +121,15 @@ public class Fiche : MonoBehaviour
         return nbEle;
     }
 
+    public void afficheComp()
+    {
+        string tmp = "Commande :";
+        foreach(string s in CompositionAFaire) 
+        {
+            tmp += ("\n- " + s);
+           // Debug.Log(tmp);
+        }
+        _textMeshPro.text = tmp;
+    }
 
 }
