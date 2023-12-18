@@ -90,6 +90,7 @@ public class Fiche : MonoBehaviour
 
     public void Verif()
     {
+        col = false;
         GameObject fil = Burger;
         int elem = nbElement();
         for (int i = 0; i < elem; i++)
