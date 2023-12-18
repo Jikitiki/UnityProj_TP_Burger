@@ -45,17 +45,13 @@ public class Fiche : MonoBehaviour
             Verif();
             
         }
-        
-        
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Burger")
         {
-            Debug.Log("CA RENTRE FORT LAAAAAAAAAAAAAAA");
             col = true;
-
         }
     }
 
@@ -95,15 +91,13 @@ public class Fiche : MonoBehaviour
         int elem = nbElement();
         for (int i = 0; i < elem; i++)
         {
-            Debug.Log("AA " + CompositionAFaire[i]);
-            Debug.Log("A " + fil.name);
             if(fil.GetComponent<Transform>().childCount != 0)
             {
                 if(i < nbElements + 2)
                 {
                     if (CompositionAFaire[i] == fil.transform.GetChild(0).tag)
                     {
-                        Debug.Log("AAA");
+                        // Debug.Log("AAA");
                         score++;
                     }
                     fil = GameObject.Find(fil.transform.GetChild(0).name);
