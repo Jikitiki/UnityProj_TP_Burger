@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Verification : MonoBehaviour
 {
-    private string[] ListeFaire;
+   /* private string[] ListeFaire;
     public GameObject Burger;
     public int score = 0;
     private bool isVerifier = true;
@@ -61,6 +61,6 @@ public class Verification : MonoBehaviour
         }
         Debug.Log("ele " + nbEle);
         return nbEle;
-    }
+    }*/
 
 }
