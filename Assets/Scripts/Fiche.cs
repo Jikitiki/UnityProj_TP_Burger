@@ -141,7 +141,8 @@ public class Fiche : MonoBehaviour
 
     public void DestructionBurger()
     {
-        Destroy(GameObject.Find(Burger.transform.GetChild(0).name));
+        if(Burger.GetComponent<Transform>().childCount != 0)
+            Destroy(GameObject.Find(Burger.transform.GetChild(0).name));
     }
 
 }
