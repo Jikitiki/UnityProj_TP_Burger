@@ -20,7 +20,13 @@ public class Fiche : MonoBehaviour
     int nbEle = 0;
     int nbElements;
 
-
+    public enum Aliment
+    {
+       Fromage = 0,
+       Salade = 1,
+       Steak = 2,
+       Tomates = 3
+    };
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +42,8 @@ public class Fiche : MonoBehaviour
     {
         if (Input.GetKeyDown("e") && col)
         {
-            Verif(); 
+            Verif();
+            
         }
         
         
@@ -60,13 +67,7 @@ public class Fiche : MonoBehaviour
         }
     }
 
-    public enum Aliment
-    {
-       Fromage = 0,
-       Salade = 1,
-       Steak = 2,
-       Tomates = 3
-    };
+    
 
     public void generationFiche()
     {
